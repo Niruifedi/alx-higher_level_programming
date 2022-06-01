@@ -7,6 +7,6 @@ while i >= 97:
         i = i - 32
         flag = 1
     print("{:s}".format(chr(i)), end="")
-    if flag ==1:
+    if flag == 1:
         i = i + 32
     i = i - 1
