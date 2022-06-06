@@ -10,5 +10,4 @@ def divisible_by_2(my_list=[]):
             booll[count] = True
         else:
             booll[count] = False
-    return(booll)
-            
+    return(booll) 
