@@ -4,11 +4,9 @@
 
 
 def safe_print_integer(value):
-    while True:
-        try:
-            if isinstance(value, int):
-                print("{:d}".format(value))
-                return True
-        except ValueError:
-            print()
-            return False
+    try:
+        if isinstance(value, int):
+            print("{:d}".format(value))
+            return True
+    except ValueError:
+        return False
