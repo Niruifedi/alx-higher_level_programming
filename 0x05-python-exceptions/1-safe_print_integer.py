@@ -6,10 +6,9 @@
 def safe_print_integer(value):
     while True:
         try:
-            if isinstance(value, int) == True:
+            if isinstance(value, int):
                 print("{:d}".format(value))
                 return True
-            break
         except ValueError:
             print()
             return False
