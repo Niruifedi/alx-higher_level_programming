@@ -47,13 +47,15 @@ Usage
 
 ::
     Testing negative values.
-    >>> my_list.append(-10)
-    >>> my_list.append(-20)
-    >>> my_list.append(30)
-    >>> my_list.append(50)
-    >>> my_list.append(10)
-    >>> my_list.print_sorted()
-    [-20, -10, 1, 3, 4, 10, 30, 50]
+    >>> MyList = __import__('1-my_list').MyList
+    >>> obj = MyList()
+    >>> obj.append(-10)
+    >>> obj.append(-200)
+    >>> obj.append(-40)
+    >>> obj.append(550)
+    >>> obj.append(83)
+    >>> obj.print_sorted()
+    [-200, -40, -10, 83, 550]
 
 ::
     Testing empty object
@@ -77,3 +79,4 @@ Usage
     Traceback (most recent call last):
     ...
     NameError: name 'NULL' is not defined
+    
