@@ -18,7 +18,7 @@ Usage
     >>> my_list = MyList()
 
 ::    
-    add elements to list.
+    Testing Main test method.
 
     >>> my_list.append(1)
     >>> my_list.append(4)
@@ -32,15 +32,48 @@ Usage
     [1, 4, 2, 3, 5]
 
 ::
-    apply method.
+    apply method
 
     >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
 
 ::
-    remove from list.
+    Testing remove function
 
     >>> my_list.remove(5)
     >>> my_list.remove(2)
     >>> my_list.print_sorted()
     [1, 3, 4]
+
+::
+    Testing negative values.
+    >>> my_list.append(-10)
+    >>> my_list.append(-20)
+    >>> my_list.append(30)
+    >>> my_list.append(50)
+    >>> my_list.append(10)
+    >>> my_list.print_sorted()
+    [-20, -10, 1, 3, 4, 10, 30, 50]
+
+::
+    Testing empty object
+    >>> list = MyList()
+    >>> list.append()
+    Traceback (most recent call last):
+    ...
+    TypeError: list.append() takes exactly one argument (0 given)
+
+::
+
+    Testing None value.
+    >>> list.append(None)
+    >>> list.print_sorted()
+    [None]
+
+::
+    Testing NULL value
+    >>> list1 = MyList()
+    >>> list1.append(NULL)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'NULL' is not defined
