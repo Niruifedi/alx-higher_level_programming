@@ -7,6 +7,4 @@ def class_to_json(obj):
         with simple data structure (list, dictionary,string,
         integer and boolean) for Json serialization object
     """
-    d = {'__classname__': type(obj).__name__}
-    d.update(vars(obj))
-    return d
+    return obj.__dict__
