@@ -22,7 +22,7 @@ def print_status():
             size += int(line[-1])
             code = line[-2]
             status_code[code] += 1
-        except:
+        except Exception:
             continue
 
         if counter == 10:
@@ -32,9 +32,9 @@ def print_status():
                     print("{}: {}".format(key, val))
             counter = 0
         #counter += 1
-    if counter < 9:
+    if counter < 10:
         print("File size: {}".format(size))
-        for key, val in status_code.items():
+        for key, val in sorted(status_code.items()):
             if val != 0:
                 print("{}: {}".format(key, val))
 
