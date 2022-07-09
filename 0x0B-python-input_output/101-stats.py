@@ -12,7 +12,7 @@ def print_status():
     size = 0
     counter = 0
     status_code = {'200': 0, '301': 0, '400': 0, '401': 0,
-    '403': 0, '404': 0, '405': 0, '500': 0}
+            '403': 0, '404': 0, '405': 0, '500': 0}
 
     for i in sys.stdin:
         counter += 1
@@ -31,7 +31,7 @@ def print_status():
                 if val != 0:
                     print("{}: {}".format(key, val))
             counter = 0
-        #counter += 1
+        # counter += 1
     if counter < 10:
         print("File size: {}".format(size))
         for key, val in sorted(status_code.items()):
