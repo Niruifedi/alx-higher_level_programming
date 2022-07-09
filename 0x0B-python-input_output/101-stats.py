@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-import sys
-
 """reads and prints status code from stdin"""
+
+
+import sys
 
 
 def print_status():
@@ -11,7 +12,7 @@ def print_status():
     size = 0
     counter = 0
     status_code = {'200': 0, '301': 0, '400': 0, '405': 0,
-                    '401': 0, '403': 0, '404': 0, '500': 0}
+    '401': 0, '403': 0, '404': 0, '500': 0}
 
     for i in sys.stdin:
         line = i.split()
