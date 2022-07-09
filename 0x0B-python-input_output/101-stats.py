@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import sys
 
+"""reads and prints status code from stdin"""
+
 
 def print_status():
     """
