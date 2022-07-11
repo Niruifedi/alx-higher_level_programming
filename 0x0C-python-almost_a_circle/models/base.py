@@ -2,7 +2,7 @@
 """Base Class."""
 
 
-class Base():
+class Base:
     """class Base"""
     __nb_objects = 0
 
@@ -13,5 +13,5 @@ class Base():
         if id != None:
             self.id = id
         else:
-            __nb_objects += 1
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
