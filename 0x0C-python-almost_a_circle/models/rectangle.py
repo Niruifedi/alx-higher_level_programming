@@ -102,7 +102,7 @@ class Rectangle(Base):
                 self.__y = args[4]
             except IndexError:
                 pass
-    
+
     def to_dictionary(self):
         """returns dictionary representation of Rectangle."""
         return {'x': getattr(self, 'x'),
@@ -110,7 +110,7 @@ class Rectangle(Base):
                 'id': getattr(self, 'id'),
                 'width': getattr(self, 'width'),
                 'height': getattr(self, 'height')
-        }
+                }
 
     def __str__(self):
         """string overloading method"""

@@ -15,7 +15,7 @@ class Square(Rectangle):
     def size(self):
         """getting property of atrributes"""
         return(self.width)
-    
+
     @size.setter
     def size(self, value):
         """set value of attribute"""
@@ -24,9 +24,9 @@ class Square(Rectangle):
         if value <= 0:
             raise ValueError('width must be > 0')
         self.width = value
-        self.height  = value
+        self.height = value
         return self.size
-    
+
     def update(self, *args, **kwargs):
         if len(args) != 0:
             try:
@@ -48,7 +48,6 @@ class Square(Rectangle):
             'size': getattr(self, 'size'),
             'y': getattr(self, 'y')
         }
-
 
     def __str__(self):
         """string overloading method"""

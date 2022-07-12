@@ -2,6 +2,7 @@
 """Base Class."""
 import json
 
+
 class Base:
     """class Base"""
     __nb_objects = 0
@@ -10,7 +11,7 @@ class Base:
         """instantiation constructor
             id: can only accept integer value
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
