@@ -26,7 +26,7 @@ class Base:
         else:
             json_str = json.dumps(list_dictionaries)
         return json_str
-    
+
     @staticmethod
     def from_json_string(json_string):
         if json_string is None or len(json_string) == 0:
@@ -46,7 +46,7 @@ class Base:
         elif cls.__name__ == "Square":
             pie = Square(5)
         pie.update(**dictionary)
-        return (pie)   
+        return (pie)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -75,7 +75,7 @@ class Base:
         try:
             with open(file_name, encoding="UTF8") as fd:
                 content = cls.from_json_string(fd.read())
-        except:
+        except Exception:
             return []
 
         instances = []
@@ -98,18 +98,18 @@ class Base:
                     string = ""
                     item = item.to_dictionary()
                     string += (str(item["id"]) + "," +
-                            str(item["width"]) + "," +
-                            str(item["height"]) + "," +
-                            str(item["x"]) + "," + str(item["y"]))
+                               str(item["width"]) + "," +
+                               str(item["height"]) + "," +
+                               str(item["x"]) + "," + str(item["y"]))
                 f_csv.writerow(string)
-                
+
             if cls.__name__ == 'Square':
                 for item in list_objs:
                     string = ""
                     item = item.to_dictionary()
                     string += (str(item["id"]) + "," +
-                            str(item["size"]) + "," +
-                            str(item["x"]) + "," + str(item["y"]))
+                               str(item["size"]) + "," +
+                               str(item["x"]) + "," + str(item["y"]))
                     f_csv.writerow(string)
 
     @classmethod
