@@ -85,11 +85,12 @@ class Rectangle(Base):
 
     def display(self):
         """prints rectangle representation"""
-        rectangle = ''
-        print("\n" * self.__y, end='')
-        for i in range(self.__height):
-            rectangle += ("" * self.__x) + ('#' * self.__width) + '\n'
-        print(rectangle)
+        [print() for i in range(self.__y)]
+        for j in range(self.__height):
+            [print(" ", end='') for i in range(self.__x)]
+            for w in range(self.__width):
+                print('#', end='')
+            print()
 
     def update(self, *args, **kwargs):
         """no word arguments and key word arguments"""
