@@ -31,6 +31,7 @@ class Square(Rectangle):
         return self.size
 
     def update(self, *args, **kwargs):
+        """no word arguments and key word arguments"""
         if len(args) != 0:
             try:
                 self.id = args[0]
