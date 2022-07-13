@@ -93,6 +93,7 @@ class Rectangle(Base):
         print(rectangle)
 
     def update(self, *args, **kwargs):
+        """no word arguments and key word arguments"""
         if len(args) == 0:
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
