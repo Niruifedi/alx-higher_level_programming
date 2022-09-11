@@ -15,7 +15,7 @@ if __name__ == "__main__":
     )
     cur = con.cursor()
 cur.execute("SELECT * FROM states WHERE name LIKE \
-            '{:s}';".format(argv[4]))
+            '{:s}' ORDER BY id ASC;".format(argv[4]))
 db = cur.fetchall()
 
 for i in db:
