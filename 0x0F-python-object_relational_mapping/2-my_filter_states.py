@@ -19,4 +19,5 @@ if __name__ == "__main__":
     db = cur.fetchall()
 
     for i in db:
-        print(i)
+        if i[1] == argv[4]:
+            print(i)
