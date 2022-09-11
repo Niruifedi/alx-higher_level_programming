@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import MySQLdb
-from sys import argv
-
 """
 a script that lists all the states
 from the database
 """
+import MySQLdb
+from sys import argv
+
 
 
 if __name__ == "__main__":
