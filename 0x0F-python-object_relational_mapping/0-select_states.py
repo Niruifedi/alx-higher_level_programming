@@ -5,7 +5,7 @@ from sys import argv
 
 if __name__ == "__main__":
     con = MySQLdb.connect(
-        host='Localhost', port=3306,
+        host='localhost', port=3306,
         user=argv[1], password=argv[2], database=argv[3]
     )
     cur = con.cursor()
@@ -15,3 +15,4 @@ if __name__ == "__main__":
     for i in db:
         print(i)
     cur.close()
+    db.close()
