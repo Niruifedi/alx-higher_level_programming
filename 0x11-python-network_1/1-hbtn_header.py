@@ -7,10 +7,9 @@ variable found in the header of the response
 """
 
 import urllib.request
-from sys import argv
+import sys
 
-url = argv[1]
-# request = urllib.request.Request(url)
+url = sys.argv[1]
 
 with urllib.request.urlopen(url) as response:
     print(dict(response.headers).get("X-Request-Id"))
